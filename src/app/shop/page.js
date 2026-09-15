@@ -1,5 +1,6 @@
 import { query } from '@/lib/db';
 import Link from 'next/link';
+import CheckoutButton from './CheckoutButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,7 +44,7 @@ export default async function Shop() {
             <div className="item-details">
               <h3>{prodotto.nome}</h3>
               <p>€ {parseFloat(prodotto.prezzo).toFixed(2).replace('.', ',')}</p>
-              <button className="btn-primary" style={{ marginTop: '1rem', width: '100%' }}>Acquista Ora</button>
+              <CheckoutButton product={prodotto} />
             </div>
           </div>
         ))}
