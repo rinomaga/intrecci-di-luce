@@ -43,7 +43,12 @@ export default async function Shop() {
             <div className="img-placeholder" style={{ backgroundImage: `url('${prodotto.immagine_url}')` }}></div>
             <div className="item-details">
               <h3>{prodotto.nome}</h3>
-              <p>€ {parseFloat(prodotto.prezzo).toFixed(2).replace('.', ',')}</p>
+              {prodotto.descrizione && (
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: '0.5rem 0 1rem 0', lineHeight: '1.4' }}>
+                  {prodotto.descrizione}
+                </p>
+              )}
+              <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>€ {parseFloat(prodotto.prezzo).toFixed(2).replace('.', ',')}</p>
               <CheckoutButton product={prodotto} />
             </div>
           </div>
