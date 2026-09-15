@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { updateOrderStatus } from '../actions/orders';
+import { updateOrderStatus } from './actions/orders';
 
 export default function OrderStatusSelect({ orderId, initialStatus }) {
   const [loading, setLoading] = useState(false);
