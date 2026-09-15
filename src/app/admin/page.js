@@ -1,5 +1,7 @@
 import { cookies } from 'next/headers';
 import LoginForm from './LoginForm';
+import AdminNav from './AdminNav';
+import OrderStatusSelect from './OrderStatusSelect';
 import { query } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -32,6 +34,8 @@ export default async function AdminPage() {
     <div className="container" style={{ padding: '4rem 2rem' }}>
       <h1>Dashboard Amministratore</h1>
       <p style={{ marginBottom: '2rem' }}>Benvenuto nel pannello di controllo di Intrecci Di Luce.</p>
+      
+      <AdminNav />
 
       <div className="glass-panel" style={{ padding: '2rem', marginBottom: '2rem' }}>
         <h3>Ultimi Ordini</h3>
@@ -55,7 +59,9 @@ export default async function AdminPage() {
                   <td style={{ padding: '1rem 0' }}>{ordine.nome_cliente}</td>
                   <td style={{ padding: '1rem 0' }}>{ordine.email_cliente}</td>
                   <td style={{ padding: '1rem 0' }}>€ {parseFloat(ordine.totale).toFixed(2)}</td>
-                  <td style={{ padding: '1rem 0' }}>{ordine.stato}</td>
+                  <td style={{ padding: '1rem 0' }}>
+                    <OrderStatusSelect orderId={ordine.id} initialStatus={ordine.stato} />
+                  </td>
                 </tr>
               ))}
             </tbody>
