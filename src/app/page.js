@@ -17,17 +17,13 @@ export default function Home() {
       <section id="chi-siamo" className="section-padding container about-section">
         <h2 className="section-title" style={{textAlign: 'left', marginBottom: '2rem'}}>CHI SIAMO</h2>
         <p>
-          La Chiarìa siciliana è un accessorio artigianale di lusso, dove l'uncinetto si eleva a forma d'arte, 
-          portando la luce e l'autenticità di Chiarìa nei cuori e nella vita di donne in tutto il mondo. 
-          Creiamo con passione ed eleganza per offrirti un pezzo unico e prezioso.
+          Siamo due sorelle unite da un legame profondo e da una passione instancabile per il fatto a mano. Cresciute coltivando il culto per il gusto in tutte le sue declinazioni, abbiamo trovato nell'arte dell'uncinetto il nostro linguaggio d'elezione. Le nostre mani si muovono tra trame e intrecci, trasformando filati scelti con cura in forme che celebrano la bellezza e l'armonia. Chiarìa nasce proprio da questa sinergia quotidiana: un dialogo continuo tra sorelle, dove la pazienza della lavorazione artigianale si fonde con la ricerca costante dell'eleganza estetica.
         </p>
 
         <div id="progetto" style={{marginTop: '4rem'}}>
           <h2 className="section-title" style={{textAlign: 'left', marginBottom: '2rem'}}>IL NOSTRO PROGETTO</h2>
           <p>
-            Il nostro progetto nasce dall'amore per l'artigianato e dalla volontà di creare accessori
-            di riferimento nel mondo del lusso fatto a mano. Ogni creazione all'uncinetto è studiata 
-            nei minimi dettagli per esaltare la femminilità.
+            In Sicilia, la chiarìa è quel chiarore diffuso e nitido che squarcia il buio, come la luce lunare che all'improvviso illumina la notte e svela i contorni del mondo. Questo è il cuore della nostra filosofia. Vogliamo portare alla luce l'eleganza dei dettagli, creando accessori che non siano semplici ornamenti, ma veri e propri punti luce in grado di far brillare chi li indossa. Ogni nostro pezzo è un intreccio di luce: un inno alla luminosità, alla grazia e all'esclusività di un oggetto ideato e realizzato interamente a mano, nodo dopo nodo.
           </p>
         </div>
       </section>
@@ -99,6 +95,9 @@ export default function Home() {
       <section id="prodotti" className="section-padding container">
         <div style={{textAlign: 'center', marginBottom: '4rem'}}>
           <h3 style={{fontFamily: 'var(--font-sans)', color: 'var(--text-color)', fontSize: '1.2rem', letterSpacing: '0.1em', marginBottom: '0.5rem'}}>COSA PUOI TROVARE</h3>
+          <p style={{maxWidth: '800px', margin: '1.5rem auto 3rem', color: 'var(--text-muted)'}}>
+            Entrare nel mondo di Chiarìa significa scoprire un laboratorio dove la tradizione artigianale incontra lo stile contemporaneo. Qui il tempo rallenta per dare spazio alla cura minuziosa del dettaglio. Esploriamo accostamenti cromatici e giochi di trasparenze, intrecciando filati sottili a cristalli e pietre sfaccettate per catturare ogni singolo riflesso di luce. Troverai un'eleganza sussurrata ma di forte impatto, pensata per chi cerca un'alternativa autentica e ricca di carattere rispetto agli accessori realizzati in serie.
+          </p>
           <h2 className="section-title" style={{marginBottom: 0}}>I NOSTRI PRODOTTI</h2>
         </div>
         
@@ -108,8 +107,7 @@ export default function Home() {
             <div className="product-img" style={{ backgroundImage: "url('/fotoArticoli/IMG-20260914-WA0022.jpg')" }}></div>
             <h3>Bijoux</h3>
             <p>
-              Borse gioiello cucite a mano dove l'uncinetto si intreccia a luminosi cristalli e pietre preziose, 
-              per un tocco di classe senza tempo.
+              Orecchini, collane, bracciali e pendenti progettati per vibrare di luce. Minuziosi intrecci abbracciano e incastonano piccole pietre luminose e cristalli, creando composizioni flessuose, leggere e delicate che incorniciano il viso con assoluta raffinatezza.
             </p>
             <Link href="/shop" className="btn-primary" style={{marginTop: '1.5rem'}}>Scopri i Bijoux</Link>
           </div>
@@ -118,8 +116,7 @@ export default function Home() {
             <div className="product-img" style={{ backgroundImage: "url('/fotoArticoli/IMG-20260914-WA0021.jpg')" }}></div>
             <h3>Sciccheria</h3>
             <p>
-              La nostra linea esclusiva di accessori. L'artigianato si sposa con l'eleganza per 
-              creare oggetti di puro fascino.
+              Piccoli scrigni di stile, strutturati e lavorati interamente all'uncinetto. Ogni borsa è una vera e propria sciccheria curata in ogni singolo millimetro, dai manici alle rifiniture interne, fino alle nappe decorative intrecciate a mano.
             </p>
             <Link href="/shop" className="btn-primary" style={{marginTop: '1.5rem'}}>Scopri Sciccheria</Link>
           </div>
