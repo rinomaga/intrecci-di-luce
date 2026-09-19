@@ -35,8 +35,9 @@ export default function RootLayout({ children }) {
             <div className="footer-left">
               <h4 style={{fontFamily: 'var(--font-serif)', marginBottom: '1rem', color: 'var(--primary-color)', fontSize: '1.2rem', letterSpacing: '0.1em'}}>Contattaci</h4>
               <p>📞 +39 348 0199643</p>
-              <a href="mailto:melaniabonfiglio78@gmail.com">✉️ melaniabonfiglio78@gmail.com</a>
-              <a href="https://www.chiariabijoux.it" style={{marginTop: '0.5rem', display: 'inline-block'}}>www.chiariabijoux.it</a>
+              <a href="mailto:m.bonfiglio@chiaria.store">✉️ m.bonfiglio@chiaria.store</a>
+              <a href="mailto:eecsrl@pecaruba.it">PEC: eecsrl@pecaruba.it</a>
+              <a href="https://www.chiaria.store" style={{marginTop: '0.5rem', display: 'inline-block'}}>www.chiaria.store</a>
             </div>
             <div className="footer-center">
               <Image src="/logo.png" alt="Chiarìa Intrecci di Luce" width={140} height={70} style={{ objectFit: 'contain' }} />
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div className="footer-bottom">
+            <p style={{marginBottom: '0.5rem'}}>Energy Engineering Consulting Srl | Via Ghibellina 91, Messina | P.IVA: 03759020831 | REA: ME-258663 | Cap. Soc. 10.000€ i.v.</p>
             <p>&copy; {new Date().getFullYear()} Chiarìa Intrecci di Luce. Tutti i diritti riservati.</p>
           </div>
         </footer>

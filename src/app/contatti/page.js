@@ -4,8 +4,8 @@ export default function Contatti() {
   return (
     <div className="container animate-fade-in" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
       <Image 
-        src="/logo.jpeg" 
-        alt="Charìa Bijoux Logo" 
+        src="/logo.png" 
+        alt="Chiarìa Intrecci di Luce Logo" 
         width={300} 
         height={150} 
         style={{ objectFit: 'contain', margin: '0 auto 2rem auto' }} 
@@ -27,8 +27,8 @@ export default function Contatti() {
           <div>
             <strong>Email:</strong>
             <p style={{ marginTop: '0.5rem', color: 'var(--primary-color)' }}>
-              <a href="mailto:melaniabonfiglio78@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
-                melaniabonfiglio78@gmail.com
+              <a href="mailto:m.bonfiglio@chiaria.store" style={{ color: 'inherit', textDecoration: 'none' }}>
+                m.bonfiglio@chiaria.store
               </a>
             </p>
           </div>
