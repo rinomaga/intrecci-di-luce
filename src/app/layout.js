@@ -1,8 +1,9 @@
 import './globals.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
-  title: 'Intrecci Di Luce | Bijoux Artigianali Fatti a Mano',
+  title: 'Charìa Bijoux | Bijoux Artigianali Fatti a Mano',
   description: 'Gioielli artigianali unici, creati a mano con passione. Scopri le nostre collezioni di bracciali, orecchini e collane.',
 };
 
@@ -12,11 +13,14 @@ export default function RootLayout({ children }) {
       <body>
         <header className="site-header glass-panel">
           <div className="container header-content">
-            <Link href="/" className="logo">INTRECCI DI LUCE</Link>
+            <Link href="/" className="logo">
+              <Image src="/logo.png" alt="Charìa Bijoux" width={180} height={90} style={{ objectFit: 'contain' }} priority />
+            </Link>
             <nav className="main-nav">
               <Link href="/">Home</Link>
               <Link href="/shop">Shop</Link>
               <Link href="/galleria">Galleria</Link>
+              <Link href="/contatti">Contatti</Link>
             </nav>
           </div>
         </header>
@@ -28,8 +32,13 @@ export default function RootLayout({ children }) {
         <footer className="site-footer">
           <div className="container footer-content">
             <div className="footer-brand">
-              <h3>INTRECCI DI LUCE</h3>
+              <Image src="/logo.png" alt="Charìa Bijoux" width={140} height={70} style={{ objectFit: 'contain', marginBottom: '1rem' }} />
               <p>Bijoux artigianali fatti a mano con amore.</p>
+            </div>
+            <div className="footer-contact">
+              <h4>Contatti</h4>
+              <p>📞 +348 0199643</p>
+              <p>✉️ melaniabonfiglio78@gmail.com</p>
             </div>
             <div className="footer-social">
               <h4>Seguici</h4>
@@ -38,7 +47,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Intrecci Di Luce. Tutti i diritti riservati.</p>
+            <p>&copy; {new Date().getFullYear()} Charìa Bijoux. Tutti i diritti riservati.</p>
           </div>
         </footer>
       </body>

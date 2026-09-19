@@ -33,7 +33,7 @@ export default async function AdminPage() {
   return (
     <div className="container" style={{ padding: '4rem 2rem' }}>
       <h1>Dashboard Amministratore</h1>
-      <p style={{ marginBottom: '2rem' }}>Benvenuto nel pannello di controllo di Intrecci Di Luce.</p>
+      <p style={{ marginBottom: '2rem' }}>Benvenuto nel pannello di controllo di Charìa Bijoux.</p>
       
       <AdminNav />
 

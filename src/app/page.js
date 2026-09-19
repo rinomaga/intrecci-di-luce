@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <div className="home-page animate-fade-in">
       <section className="hero">
         <div className="hero-content">
-          <h1>L'Arte dell'Intreccio</h1>
+          <Image src="/logo.png" alt="Charìa Bijoux" width={400} height={200} style={{ objectFit: 'contain', margin: '0 auto 1.5rem auto', display: 'block' }} priority />
           <p>Gioielli artigianali unici, creati a mano con passione ed eleganza.</p>
           <Link href="/shop" className="btn-primary">Esplora la Collezione</Link>
         </div>
