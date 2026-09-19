@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
               <a href="https://www.chiariabijoux.it" style={{marginTop: '0.5rem', display: 'inline-block'}}>www.chiariabijoux.it</a>
             </div>
             <div className="footer-center">
-              <Image src="/logo.jpeg" alt="Chiarìa Intrecci di Luce" width={140} height={70} style={{ objectFit: 'contain' }} />
+              <Image src="/logo.png" alt="Chiarìa Intrecci di Luce" width={140} height={70} style={{ objectFit: 'contain' }} />
             </div>
             <div className="footer-right">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">chiaria.bijoux</a>
