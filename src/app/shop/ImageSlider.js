@@ -32,7 +32,8 @@ export default function ImageSlider({ images, altText }) {
           backgroundImage: `url('${validImages[currentIndex]}')`,
           height: '100%',
           width: '100%',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           transition: 'background-image 0.5s ease-in-out'
         }}
