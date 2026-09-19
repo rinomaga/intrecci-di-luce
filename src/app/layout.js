@@ -34,8 +34,6 @@ export default function RootLayout({ children }) {
           <div className="container footer-content">
             <div className="footer-left">
               <h4 style={{fontFamily: 'var(--font-serif)', marginBottom: '1rem', color: 'var(--primary-color)', fontSize: '1.2rem', letterSpacing: '0.1em'}}>Contattaci</h4>
-              <p>📞 +39 348 0199643</p>
-              <a href="mailto:m.bonfiglio@chiaria.store">✉️ m.bonfiglio@chiaria.store</a>
               <a href="mailto:eecsrl@pecaruba.it">PEC: eecsrl@pecaruba.it</a>
               <a href="https://www.chiaria.store" style={{marginTop: '0.5rem', display: 'inline-block'}}>www.chiaria.store</a>
             </div>
@@ -43,8 +41,6 @@ export default function RootLayout({ children }) {
               <Image src="/logo.png" alt="Chiarìa Intrecci di Luce" width={140} height={70} style={{ objectFit: 'contain' }} />
             </div>
             <div className="footer-right">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">chiaria.bijoux</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">chiaria.com</a>
               <div className="social-links">
                 {/* SVG Icons or Emojis for now */}
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{fontSize: '1.5rem'}}>📷</a>

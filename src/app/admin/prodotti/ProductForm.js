@@ -73,45 +73,72 @@ export default function ProductForm({ product }) {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <label>URL Immagine Principale (1)</label>
+        <label>Immagine Principale (1)</label>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-          Inserisci il link pubblico dell'immagine o il percorso locale.
+          Seleziona un file dal tuo computer OPPURE inserisci un link.
         </p>
+        <input 
+          type="file" 
+          name="file_immagine_url" 
+          accept="image/*"
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
         <input 
           type="text" 
           name="immagine_url" 
           defaultValue={product?.immagine_url || ''} 
-          required 
+          placeholder="Oppure inserisci URL immagine"
           style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <label>URL Immagine (2) - Opzionale</label>
+        <label>Immagine (2) - Opzionale</label>
+        <input 
+          type="file" 
+          name="file_immagine_url_2" 
+          accept="image/*"
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
         <input 
           type="text" 
           name="immagine_url_2" 
           defaultValue={product?.immagine_url_2 || ''} 
+          placeholder="Oppure inserisci URL immagine"
           style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <label>URL Immagine (3) - Opzionale</label>
+        <label>Immagine (3) - Opzionale</label>
+        <input 
+          type="file" 
+          name="file_immagine_url_3" 
+          accept="image/*"
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
         <input 
           type="text" 
           name="immagine_url_3" 
           defaultValue={product?.immagine_url_3 || ''} 
+          placeholder="Oppure inserisci URL immagine"
           style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <label>URL Immagine (4) - Opzionale</label>
+        <label>Immagine (4) - Opzionale</label>
+        <input 
+          type="file" 
+          name="file_immagine_url_4" 
+          accept="image/*"
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
         <input 
           type="text" 
           name="immagine_url_4" 
           defaultValue={product?.immagine_url_4 || ''} 
+          placeholder="Oppure inserisci URL immagine"
           style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
         />
       </div>
