@@ -4,7 +4,7 @@ export default function Contatti() {
   return (
     <div className="container animate-fade-in" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
       <Image 
-        src="/logo.png" 
+        src="/logo.jpeg" 
         alt="Charìa Bijoux Logo" 
         width={300} 
         height={150} 

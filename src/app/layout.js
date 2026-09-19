@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <header className="site-header glass-panel">
           <div className="container header-content">
             <Link href="/" className="logo">
-              <Image src="/logo.png" alt="Charìa Bijoux" width={180} height={90} style={{ objectFit: 'contain' }} priority />
+              <Image src="/logo.jpeg" alt="Charìa Bijoux" width={180} height={90} style={{ objectFit: 'contain' }} priority />
             </Link>
             <nav className="main-nav">
               <Link href="/">Home</Link>
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <footer className="site-footer">
           <div className="container footer-content">
             <div className="footer-brand">
-              <Image src="/logo.png" alt="Charìa Bijoux" width={140} height={70} style={{ objectFit: 'contain', marginBottom: '1rem' }} />
+              <Image src="/logo.jpeg" alt="Charìa Bijoux" width={140} height={70} style={{ objectFit: 'contain', marginBottom: '1rem' }} />
               <p>Bijoux artigianali fatti a mano con amore.</p>
             </div>
             <div className="footer-contact">
