@@ -5,6 +5,9 @@ import Image from 'next/image';
 export const metadata = {
   title: 'Chiarìa Intrecci di Luce',
   description: 'Gioielli artigianali unici, creati a mano con passione. Scopri le nostre collezioni di bijoux e sciccheria.',
+  icons: {
+    icon: '/Logo_Frame.jpg',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +17,7 @@ export default function RootLayout({ children }) {
         <header className="site-header">
           <div className="container header-content">
             <Link href="/" className="logo">
-              <Image src="/logo.jpeg" alt="Chiarìa Intrecci di Luce" width={180} height={90} style={{ objectFit: 'contain' }} priority />
+              <Image src="/Logo_Frame.jpg" alt="Chiarìa Intrecci di Luce" width={180} height={90} style={{ objectFit: 'contain' }} priority />
             </Link>
             <nav className="main-nav">
               <Link href="/#chi-siamo">CHI SIAMO</Link>

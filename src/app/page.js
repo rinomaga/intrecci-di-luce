@@ -1,14 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { query } from '@/lib/db';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  let prodottiInHome = [];
+  try {
+    prodottiInHome = await query('SELECT * FROM prodotti WHERE in_home = 1');
+  } catch (e) {
+    console.error("Errore DB per prodotti in home", e);
+  }
+
   return (
     <div className="home-page">
       
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>BENVENUTI IN CHIARÌA</h1>
+          <Image src="/logo.png" alt="Chiarìa Intrecci di Luce" width={600} height={250} style={{ objectFit: 'contain', margin: '0 auto 1rem auto', display: 'block', maxWidth: '100%', height: 'auto' }} priority />
           <p>Portiamo Luce ai Tuoi Dettagli</p>
         </div>
       </section>
@@ -91,36 +101,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Prodotti */}
+      {/* Prodotti e Categorie */}
       <section id="prodotti" className="section-padding container">
         <div style={{textAlign: 'center', marginBottom: '4rem'}}>
           <h3 style={{fontFamily: 'var(--font-sans)', color: 'var(--text-color)', fontSize: '1.2rem', letterSpacing: '0.1em', marginBottom: '0.5rem'}}>COSA PUOI TROVARE</h3>
           <p style={{maxWidth: '800px', margin: '1.5rem auto 3rem', color: 'var(--text-muted)'}}>
             Entrare nel mondo di Chiarìa significa scoprire un laboratorio dove la tradizione artigianale incontra lo stile contemporaneo. Qui il tempo rallenta per dare spazio alla cura minuziosa del dettaglio. Esploriamo accostamenti cromatici e giochi di trasparenze, intrecciando filati sottili a cristalli e pietre sfaccettate per catturare ogni singolo riflesso di luce. Troverai un'eleganza sussurrata ma di forte impatto, pensata per chi cerca un'alternativa autentica e ricca di carattere rispetto agli accessori realizzati in serie.
           </p>
-          <h2 className="section-title" style={{marginBottom: 0}}>I NOSTRI PRODOTTI</h2>
+          <h2 className="section-title" style={{marginBottom: 0}}>LE NOSTRE ANIME</h2>
         </div>
         
-        <div className="products-grid">
-          
+        <div className="products-grid" style={{marginBottom: '5rem'}}>
           <div className="product-card">
             <div className="product-img" style={{ backgroundImage: "url('/fotoArticoli/IMG-20260914-WA0022.jpg')" }}></div>
-            <h3>Bijoux</h3>
+            <h3>Bijoux Artigianali</h3>
             <p>
               Orecchini, collane, bracciali e pendenti progettati per vibrare di luce. Minuziosi intrecci abbracciano e incastonano piccole pietre luminose e cristalli, creando composizioni flessuose, leggere e delicate che incorniciano il viso con assoluta raffinatezza.
             </p>
-            <Link href="/shop" className="btn-primary" style={{marginTop: '1.5rem'}}>Scopri i Bijoux</Link>
           </div>
-
           <div className="product-card">
             <div className="product-img" style={{ backgroundImage: "url('/fotoArticoli/IMG-20260914-WA0021.jpg')" }}></div>
-            <h3>Sciccheria</h3>
+            <h3>Borse Gioiello (Sciccheria)</h3>
             <p>
               Piccoli scrigni di stile, strutturati e lavorati interamente all'uncinetto. Ogni borsa è una vera e propria sciccheria curata in ogni singolo millimetro, dai manici alle rifiniture interne, fino alle nappe decorative intrecciate a mano.
             </p>
-            <Link href="/shop" className="btn-primary" style={{marginTop: '1.5rem'}}>Scopri Sciccheria</Link>
           </div>
+        </div>
 
+        {prodottiInHome.length > 0 && (
+          <>
+            <div style={{textAlign: 'center', marginBottom: '4rem'}}>
+              <h2 className="section-title" style={{marginBottom: 0}}>IN EVIDENZA</h2>
+            </div>
+            <div className="products-grid">
+              {prodottiInHome.map(p => (
+                <div key={p.id} className="product-card">
+                  <div className="product-img" style={{ backgroundImage: `url('${p.immagine_url}')` }}></div>
+                  <h3>{p.nome}</h3>
+                  <p>{p.descrizione}</p>
+                  <Link href="/shop" className="btn-primary" style={{marginTop: '1.5rem'}}>Scopri di più</Link>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+        <div style={{textAlign: 'center', marginTop: '3rem'}}>
+          <Link href="/shop" className="btn-primary" style={{background: 'transparent', color: 'var(--primary-color)'}}>Visita lo Shop Completo</Link>
         </div>
       </section>
 

@@ -73,15 +73,45 @@ export default function ProductForm({ product }) {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <label>URL Immagine</label>
+        <label>URL Immagine Principale (1)</label>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-          Inserisci il link (URL) pubblico di un'immagine (es. https://imgur.com/foto.jpg) oppure il percorso di un file locale (es. /fotoArticoli/nuova-foto.jpg se ricarichi i file su GitHub).
+          Inserisci il link pubblico dell'immagine o il percorso locale.
         </p>
         <input 
           type="text" 
           name="immagine_url" 
           defaultValue={product?.immagine_url || ''} 
           required 
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <label>URL Immagine (2) - Opzionale</label>
+        <input 
+          type="text" 
+          name="immagine_url_2" 
+          defaultValue={product?.immagine_url_2 || ''} 
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <label>URL Immagine (3) - Opzionale</label>
+        <input 
+          type="text" 
+          name="immagine_url_3" 
+          defaultValue={product?.immagine_url_3 || ''} 
+          style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
+        />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <label>URL Immagine (4) - Opzionale</label>
+        <input 
+          type="text" 
+          name="immagine_url_4" 
+          defaultValue={product?.immagine_url_4 || ''} 
           style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--surface-border)', color: 'white', borderRadius: '4px' }}
         />
       </div>
@@ -95,6 +125,17 @@ export default function ProductForm({ product }) {
           style={{ width: '20px', height: '20px' }}
         />
         <label htmlFor="disponibile">Prodotto Disponibile (acquistabile)</label>
+      </div>
+
+      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <input 
+          type="checkbox" 
+          name="in_home" 
+          id="in_home"
+          defaultChecked={product ? product.in_home === 1 : false} 
+          style={{ width: '20px', height: '20px' }}
+        />
+        <label htmlFor="in_home">Mostra in Home Page (In Evidenza)</label>
       </div>
 
       <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
