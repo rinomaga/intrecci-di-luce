@@ -5,9 +5,6 @@ import Image from 'next/image';
 export const metadata = {
   title: 'Chiarìa Intrecci di Luce',
   description: 'Gioielli artigianali unici, creati a mano con passione. Scopri le nostre collezioni di bijoux e sciccheria.',
-  icons: {
-    icon: '/Logo_Frame.jpg',
-  },
 };
 
 export default function RootLayout({ children }) {
