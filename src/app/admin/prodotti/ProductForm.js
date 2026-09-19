@@ -74,6 +74,13 @@ export default function ProductForm({ product }) {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         <label>Immagine Principale (1)</label>
+        {product?.immagine_url && (
+          <img 
+            src={product.immagine_url} 
+            alt="Immagine Principale" 
+            style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '4px', marginBottom: '0.5rem' }} 
+          />
+        )}
         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
           Seleziona un file dal tuo computer OPPURE inserisci un link.
         </p>
@@ -94,6 +101,13 @@ export default function ProductForm({ product }) {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         <label>Immagine (2) - Opzionale</label>
+        {product?.immagine_url_2 && (
+          <img 
+            src={product.immagine_url_2} 
+            alt="Immagine 2" 
+            style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '4px', marginBottom: '0.5rem' }} 
+          />
+        )}
         <input 
           type="file" 
           name="file_immagine_url_2" 
@@ -111,6 +125,13 @@ export default function ProductForm({ product }) {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         <label>Immagine (3) - Opzionale</label>
+        {product?.immagine_url_3 && (
+          <img 
+            src={product.immagine_url_3} 
+            alt="Immagine 3" 
+            style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '4px', marginBottom: '0.5rem' }} 
+          />
+        )}
         <input 
           type="file" 
           name="file_immagine_url_3" 
@@ -128,6 +149,13 @@ export default function ProductForm({ product }) {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         <label>Immagine (4) - Opzionale</label>
+        {product?.immagine_url_4 && (
+          <img 
+            src={product.immagine_url_4} 
+            alt="Immagine 4" 
+            style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '4px', marginBottom: '0.5rem' }} 
+          />
+        )}
         <input 
           type="file" 
           name="file_immagine_url_4" 
