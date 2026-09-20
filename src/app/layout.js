@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div className="footer-bottom">
-            <p style={{marginBottom: '0.5rem'}}>Energy Engineering Consulting Srl | Via Ghibellina 91, Messina | P.IVA: 03759020831 | REA: ME-258663 | Cap. Soc. 10.000€ i.v.</p>
+            <p style={{marginBottom: '0.5rem'}}>EEC Srl | Via Ghibellina 91, Messina | P.IVA: 03759020831 | REA: ME-258663 | Cap. Soc. 10.000€ i.v.</p>
             <p>&copy; {new Date().getFullYear()} Chiarìa Intrecci di Luce. Tutti i diritti riservati.</p>
           </div>
         </footer>
